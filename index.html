@@ -103,7 +103,7 @@
         }
 
         .side-bar h2,
-        .body-area h2 {
+        .body-area h3 {
             color: #315d82;
             font-size: 12px;
             line-height: 1.4;
@@ -135,12 +135,12 @@
             font-weight: 700;
         }
 
-        .side-bar p:last-child {
+        .meetup {
             padding-top: 10px;
             border-top: 1px solid #cbdce2;
         }
 
-        .side-bar strong {
+        .meetup strong {
             display: block;
         }
 
@@ -153,20 +153,33 @@
             background: #fff;
         }
 
+        .welcome-label {
+            display: inline-block;
+            margin-bottom: 7px;
+            padding: 3px 7px;
+            border-radius: 999px;
+            background: #e5f4f4;
+            color: #397c82;
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .body-area h2 {
+            margin-bottom: 7px;
+            color: #203f6a;
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        .body-area h3 {
+            margin-bottom: 5px;
+        }
+
         .body-area section + section {
             margin-top: 14px;
             padding-top: 10px;
             border-top: 1px solid #e6edf2;
-        }
-
-        .body-area h2 {
-            margin-bottom: 5px;
-        }
-
-        .body-area section:first-child h2 {
-            color: #203f6a;
-            font-size: 16px;
-            line-height: 1.35;
         }
 
         .body-area ul {
@@ -186,6 +199,11 @@
             border-radius: 7px;
             background: #203f6a;
             color: #fff;
+        }
+
+        .navigation a:hover,
+        .navigation a:focus-visible {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -216,8 +234,8 @@
                     <li><a href="#resources">Learning Resources</a></li>
                     <li><a href="#contact">Join the Club</a></li>
                 </ul>
-                <p>
-                    <strong>Weekly meet-up</strong><br>
+                <p class="meetup">
+                    <strong>Weekly meet-up</strong>
                     Wednesday, 3:00 PM<br>
                     Student Activity Room
                 </p>
@@ -225,17 +243,18 @@
 
             <div class="body-area">
                 <section id="about" aria-labelledby="about-heading">
+                    <p class="welcome-label">Welcome to our community</p>
                     <h2 id="about-heading">Discover Technology, Create Possibilities</h2>
                     <p>Welcome to Campus Tech Society! We are a student-led community that brings together people interested in web development, programming, design and emerging technology.</p>
                 </section>
 
                 <section aria-labelledby="club-heading">
-                    <h2 id="club-heading">About Our Club</h2>
+                    <h3 id="club-heading">About Our Club</h3>
                     <p>Our mission is to help students build practical skills through hands-on workshops, mini projects and knowledge-sharing sessions. Everyone is welcome, including beginners.</p>
                 </section>
 
                 <section id="events" aria-labelledby="events-heading">
-                    <h2 id="events-heading">Upcoming Activities</h2>
+                    <h3 id="events-heading">Upcoming Activities</h3>
                     <ul>
                         <li><strong>HTML &amp; CSS Workshop:</strong> Create your first website.</li>
                         <li><strong>Hackathon Day:</strong> Build an idea with your team.</li>
@@ -244,14 +263,11 @@
                 </section>
 
                 <section id="resources" aria-labelledby="resources-heading">
-                    <h2 id="resources-heading">Learning Resources</h2>
+                    <h3 id="resources-heading">Learning Resources</h3>
                     <p>Start learning with free tutorials at <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a>.</p>
                 </section>
 
-                <section id="contact" aria-labelledby="contact-heading">
-                    <h2 id="contact-heading">Contact and Join the Club</h2>
-                    <p>Come to our weekly meet-up to learn more and get involved.</p>
-                </section>
+                <span id="contact"></span>
             </div>
         </main>
 
