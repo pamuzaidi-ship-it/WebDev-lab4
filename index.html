@@ -8,46 +8,72 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            padding: 15px;
+            min-width: 760px;
             background: #f1f5f9;
             color: #263b52;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 14px;
+            font-size: 10px;
             line-height: 1.55;
         }
 
         .container {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            width: calc(100% - 10px);
-            max-width: 1200px;
-            margin: 0 auto;
+            gap: 5px;
+            width: calc(100% - 40px);
+            margin: 15px auto;
         }
 
         .logo {
-            min-height: 100px;
-            padding: 20px 32px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            min-height: 72px;
+            padding: 7px 32px;
+            border: 1px solid #c8d3dd;
             border-radius: 7px;
             background: #102b49 url("header.jpg") center / cover;
             color: #fff;
         }
 
+        .logo h1 {
+            font-size: 20px;
+            line-height: 1.25;
+        }
+
+        .logo p,
+        .navigation a,
+        .footer {
+            font-size: 9px;
+        }
+
+        .logo p {
+            margin-top: 3px;
+            color: #d8f6f5;
+        }
+
         .navigation {
-            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            min-height: 33px;
+            padding: 0 20px;
+            border: 1px solid #d5e0e9;
             border-radius: 7px;
             background: #203f6a;
         }
 
-        .navigation ul {
+        .navigation ul,
+        .content {
             display: flex;
+        }
+
+        .navigation ul {
             gap: 26px;
-            margin: 0;
-            padding: 0;
             list-style: none;
         }
 
@@ -63,26 +89,100 @@
         }
 
         .content {
-            display: flex;
-            gap: 20px;
+            flex-direction: row;
+            justify-content: space-between;
+            min-height: 358px;
         }
 
         .side-bar {
-            width: 25%;
-            padding: 16px;
+            width: 20%;
+            min-height: 358px;
+            padding: 13px 12px;
             border-radius: 7px;
             background: #dfebef;
         }
 
+        .side-bar h2,
+        .body-area h2 {
+            color: #315d82;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .side-bar h2 {
+            margin-bottom: 7px;
+        }
+
+        .side-bar p {
+            margin-bottom: 8px;
+        }
+
+        .side-bar ul {
+            margin: 8px 0 18px;
+            padding-left: 12px;
+        }
+
+        .side-bar li {
+            margin-bottom: 6px;
+        }
+
+        .side-bar a,
+        .body-area a {
+            color: #28638a;
+        }
+
+        .side-bar a {
+            font-weight: 700;
+        }
+
+        .side-bar p:last-child {
+            padding-top: 10px;
+            border-top: 1px solid #cbdce2;
+        }
+
+        .side-bar strong {
+            display: block;
+        }
+
         .body-area {
-            width: 75%;
-            padding: 18px;
+            width: 70%;
+            min-height: 358px;
+            padding: 16px 18px;
+            border: 1px solid #e6edf2;
             border-radius: 7px;
             background: #fff;
         }
 
+        .body-area section + section {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid #e6edf2;
+        }
+
+        .body-area h2 {
+            margin-bottom: 5px;
+        }
+
+        .body-area section:first-child h2 {
+            color: #203f6a;
+            font-size: 16px;
+            line-height: 1.35;
+        }
+
+        .body-area ul {
+            padding-left: 12px;
+        }
+
+        .body-area li {
+            margin-bottom: 4px;
+        }
+
         .footer {
-            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 0 12px;
+            border: 1px solid #d5e0e9;
             border-radius: 7px;
             background: #203f6a;
             color: #fff;
