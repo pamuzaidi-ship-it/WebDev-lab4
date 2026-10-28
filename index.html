@@ -5,72 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore activities, events and learning resources from the FSKTM IT Club.">
     <title>FSKTM IT Club</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 15px;
+            background: #f1f5f9;
+            color: #263b52;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: calc(100% - 10px);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            min-height: 100px;
+            padding: 20px 32px;
+            border-radius: 7px;
+            background: #102b49 url("header.jpg") center / cover;
+            color: #fff;
+        }
+
+        .navigation {
+            padding: 10px 20px;
+            border-radius: 7px;
+            background: #203f6a;
+        }
+
+        .navigation ul {
+            display: flex;
+            gap: 26px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .navigation a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .navigation a:hover,
+        .navigation a:focus-visible {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .side-bar {
+            width: 25%;
+            padding: 16px;
+            border-radius: 7px;
+            background: #dfebef;
+        }
+
+        .body-area {
+            width: 75%;
+            padding: 18px;
+            border-radius: 7px;
+            background: #fff;
+        }
+
+        .footer {
+            padding: 10px 12px;
+            border-radius: 7px;
+            background: #203f6a;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <header id="top">
-        <h1>FSKTM IT Club</h1>
-        <p>Learn. Build. Innovate. Together.</p>
-    </header>
+    <div class="container">
+        <header class="logo" id="top">
+            <div class="brand">
+                <h1>FSKTM IT Club</h1>
+                <p>Learn. Build. Innovate. Together.</p>
+            </div>
+        </header>
 
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <aside aria-labelledby="sidebar-heading">
-            <h2 id="sidebar-heading">Club Corner</h2>
-            <p>Explore activities and opportunities available to our members.</p>
+        <nav class="navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="#events">Upcoming Events</a></li>
-                <li><a href="#resources">Learning Resources</a></li>
-                <li><a href="#contact">Join the Club</a></li>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <p>
-                <strong>Weekly meet-up</strong><br>
-                Wednesday, 3:00 PM<br>
-                Student Activity Room
-            </p>
-        </aside>
+        </nav>
 
-        <div>
-            <section id="about" aria-labelledby="about-heading">
-                <h2 id="about-heading">Discover Technology, Create Possibilities</h2>
-                <p>Welcome to Campus Tech Society! We are a student-led community that brings together people interested in web development, programming, design and emerging technology.</p>
-            </section>
-
-            <section aria-labelledby="club-heading">
-                <h2 id="club-heading">About Our Club</h2>
-                <p>Our mission is to help students build practical skills through hands-on workshops, mini projects and knowledge-sharing sessions. Everyone is welcome, including beginners.</p>
-            </section>
-
-            <section id="events" aria-labelledby="events-heading">
-                <h2 id="events-heading">Upcoming Activities</h2>
+        <main class="content">
+            <aside class="side-bar" aria-labelledby="sidebar-heading">
+                <h2 id="sidebar-heading">Club Corner</h2>
+                <p>Explore activities and opportunities available to our members.</p>
                 <ul>
-                    <li><strong>HTML &amp; CSS Workshop:</strong> Create your first website.</li>
-                    <li><strong>Hackathon Day:</strong> Build an idea with your team.</li>
-                    <li><strong>Tech Talk:</strong> Learn from industry speakers.</li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#resources">Learning Resources</a></li>
+                    <li><a href="#contact">Join the Club</a></li>
                 </ul>
-            </section>
+                <p>
+                    <strong>Weekly meet-up</strong><br>
+                    Wednesday, 3:00 PM<br>
+                    Student Activity Room
+                </p>
+            </aside>
 
-            <section id="resources" aria-labelledby="resources-heading">
-                <h2 id="resources-heading">Learning Resources</h2>
-                <p>Start learning with free tutorials at <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a>.</p>
-            </section>
+            <div class="body-area">
+                <section id="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading">Discover Technology, Create Possibilities</h2>
+                    <p>Welcome to Campus Tech Society! We are a student-led community that brings together people interested in web development, programming, design and emerging technology.</p>
+                </section>
 
-            <section id="contact" aria-labelledby="contact-heading">
-                <h2 id="contact-heading">Contact and Join the Club</h2>
-                <p>Come to our weekly meet-up to learn more and get involved.</p>
-            </section>
-        </div>
-    </main>
+                <section aria-labelledby="club-heading">
+                    <h2 id="club-heading">About Our Club</h2>
+                    <p>Our mission is to help students build practical skills through hands-on workshops, mini projects and knowledge-sharing sessions. Everyone is welcome, including beginners.</p>
+                </section>
 
-    <footer>
-        <p>&copy; 2026 FSKTM IT Club. All rights reserved.</p>
-    </footer>
+                <section id="events" aria-labelledby="events-heading">
+                    <h2 id="events-heading">Upcoming Activities</h2>
+                    <ul>
+                        <li><strong>HTML &amp; CSS Workshop:</strong> Create your first website.</li>
+                        <li><strong>Hackathon Day:</strong> Build an idea with your team.</li>
+                        <li><strong>Tech Talk:</strong> Learn from industry speakers.</li>
+                    </ul>
+                </section>
+
+                <section id="resources" aria-labelledby="resources-heading">
+                    <h2 id="resources-heading">Learning Resources</h2>
+                    <p>Start learning with free tutorials at <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">W3 Schools</a>.</p>
+                </section>
+
+                <section id="contact" aria-labelledby="contact-heading">
+                    <h2 id="contact-heading">Contact and Join the Club</h2>
+                    <p>Come to our weekly meet-up to learn more and get involved.</p>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 FSKTM IT Club. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
